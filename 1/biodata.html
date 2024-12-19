@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Professional Biodata  - Tech Professional"
+    />
+    <title>Professional Profile</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="{{url_for('images', filename='96.ico')}}"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --primary-color: #2c3e50;
+        --secondary-color: #3498db;
+        --text-color: #333;
+        --background-color: #f4f6f7;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        background-color: var(--background-color);
+        color: var(--text-color);
+      }
+
+      .a4-container {
+        width: 21cm;
+        min-height: 29.7cm;
+        margin: 1cm auto;
+        padding: 2cm;
+        background: white;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        position: relative;
+      }
+
+      .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+        border-bottom: 3px solid var(--primary-color);
+        padding-bottom: 1rem;
+      }
+
+      .profile-name {
+        font-size: 2.5rem;
+        color: var(--primary-color);
+        font-weight: 700;
+      }
+
+      .contact-summary {
+        text-align: right;
+        font-size: 0.9rem;
+      }
+
+      .section {
+        margin-bottom: 1.5rem;
+      }
+
+      .section-title {
+        color: var(--secondary-color);
+        border-bottom: 2px solid var(--secondary-color);
+        padding-bottom: 0.5rem;
+        margin-bottom: 1rem;
+        font-size: 1.3rem;
+        display: flex;
+        align-items: center;
+      }
+
+      .section-title i {
+        margin-right: 0.7rem;
+      }
+
+      .info-grid {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        gap: 0.75rem;
+        margin-bottom: 1rem;
+      }
+
+      .info-label {
+        font-weight: 600;
+        color: var(--primary-color);
+      }
+
+      .info-content a {
+        color: var(--secondary-color);
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .info-content a:hover {
+        color: var(--primary-color);
+        text-decoration: underline;
+      }
+
+      .interests-achievements {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+      }
+
+      .interests-list,
+      .achievements-list {
+        list-style-type: none;
+      }
+
+      .interests-list li,
+      .achievements-list li {
+        position: relative;
+        padding-left: 1.5rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .interests-list li::before,
+      .achievements-list li::before {
+        content: "\2022";
+        color: var(--secondary-color);
+        position: absolute;
+        left: 0;
+        font-weight: bold;
+      }
+
+      .digital-signature {
+        margin-top: 2rem;
+        text-align: center;
+        font-size: 0.8rem;
+        color: #777;
+      }
+
+      @media print {
+        .a4-container {
+          box-shadow: none;
+          margin: 0;
+          padding: 1cm;
+        }
+      }
+
+      @media screen and (max-width: 768px) {
+        .a4-container {
+          width: 100%;
+          margin: 0;
+          padding: 1cm;
+        }
+
+        .header {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .contact-summary {
+          text-align: center;
+          margin-top: 0.5rem;
+        }
+
+        .info-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .interests-achievements {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="a4-container" role="document">
+      <header class="header">
+        <h1 class="profile-name">Suraj V</h1>
+        <div class="contact-summary">
+          <p>surajv@gmail.com</p>
+          <p>+91 92345-67890</p>
+        </div>
+      </header>
+
+      <main>
+        <!-- Personal Information Section -->
+        <section class="section">
+          <h2 class="section-title">
+            <i class="fas fa-user-circle"></i>Personal Information
+          </h2>
+          <div class="info-grid">
+            <div class="info-label">Full Name</div>
+            <div class="info-content">Suraj Vxxx</div>
+
+            <div class="info-label">Date of Birth</div>
+            <div class="info-content">1 January 2004</div>
+
+            <div class="info-label">Nationality</div>
+            <div class="info-content">Indian</div>
+
+            <div class="info-label">Languages</div>
+            <div class="info-content">English, Kannada</div>
+
+            <div class="info-label">Marital Status</div>
+            <div class="info-content">Married</div>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2 class="section-title">
+            <i class="fas fa-graduation-cap"></i>Education
+          </h2>
+          <div class="info-grid">
+            <div class="info-label">Degree</div>
+            <div class="info-content">
+              Bachelor of Technology (B.Tech)
+              <br />Computer Science and Engineering
+            </div>
+
+            <div class="info-label">Institution</div>
+            <div class="info-content">
+              J.S.S. Academy of Technical Education, Bangalore
+            </div>
+
+            <div class="info-label">Graduation Year</div>
+            <div class="info-content">2026</div>
+          </div>
+        </section>
+
+        <!-- Contact Details Section -->
+        <section class="section">
+          <h2 class="section-title">
+            <i class="fas fa-address-book"></i>Contact Details
+          </h2>
+          <div class="info-grid">
+            <div class="info-label">Email</div>
+            <div class="info-content">
+              <a
+                href="mailto:john.doe@example.com"
+                aria-label="Send email to John Doe"
+              >
+                surajv@gmail.com
+              </a>
+            </div>
+
+            <div class="info-label">Phone</div>
+            <div class="info-content">
+              <a href="tel:+919876543210" aria-label="Call John Doe">
+                +91 92345-67890
+              </a>
+            </div>
+
+            <div class="info-label">Address</div>
+            <div class="info-content">
+              XV Street, Humpy nagar, Banglore, Karnataka, India
+            </div>
+          </div>
+        </section>
+
+        <!-- Interests and Achievements -->
+        <div class="interests-achievements">
+          <section class="section">
+            <h2 class="section-title">
+              <i class="fas fa-heart"></i>Personal Interests
+            </h2>
+            <ul class="interests-list">
+              <li>Technology Innovation</li>
+              <li>Open Source Contribution</li>
+              <li>Machine Learning</li>
+              <li>Photography</li>
+              <li>Reading Sci-Fi Novels</li>
+            </ul>
+          </section>
+
+          <section class="section">
+            <h2 class="section-title">
+              <i class="fas fa-trophy"></i>Achievements
+            </h2>
+            <ul class="achievements-list">
+              <li>Won 1<sup>st</sup> place in a painting competition</li>
+              <li>Volunteered in a tree plantation drive in the community</li>
+              <li>Participated in drama performances during school events</li>
+            </ul>
+          </section>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

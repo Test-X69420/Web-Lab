@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Suraj V | Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/x-icon" href="96.ico" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+      /* Basic Styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: sans-serif;
+        line-height: 1.6;
+        background-color: #f4f4f9;
+        color: #333;
+      }
+
+      header {
+        background: #333;
+        color: #fff;
+        padding: 1.5rem 0;
+      }
+      h1 {
+        color: white;
+      }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+      }
+
+      nav ul li {
+        margin: 0 15px;
+      }
+
+      nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.2rem;
+      }
+
+      nav ul li a.active {
+        border-bottom: 2px solid #00aaff;
+      }
+
+      .hero {
+        text-align: center;
+        padding: 2rem 1rem;
+        background: linear-gradient(135deg, #00aaff, #0044cc);
+        color: #fff;
+      }
+
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+
+      .hero p {
+        margin: 0.5rem 0 1rem;
+        font-size: 1.2rem;
+      }
+
+      .social-links {
+        margin-top: 1rem;
+      }
+
+      .social-links a {
+        margin: 0 10px;
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.2rem;
+        border: 1px solid #fff;
+        padding: 5px 10px;
+        border-radius: 5px;
+        transition: all 0.3s ease-in-out;
+      }
+
+      .social-links a:hover {
+        background: #fff;
+        color: #00aaff;
+      }
+
+      .about-preview {
+        padding: 2rem;
+        text-align: center;
+      }
+
+      .about-preview h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+
+      .about-preview p {
+        font-family: sans-serif;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        text-align: start;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        background: #00aaff;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background 0.3s ease-in-out;
+      }
+
+      .btn:hover {
+        background: #0044cc;
+      }
+
+      footer {
+        text-align: center;
+        padding: 1rem 0;
+        background: #333;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="biodata.html">Bio-Data</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-content">
+          <h1>Suraj Vittal</h1>
+          <p>Software Developer | Tech Enthusiast</p>
+          <div class="social-links">
+            <a href="https://linkedin.com/" class="social-icon">LinkedIn</a>
+            <a href="https://github.com/" class="social-icon">GitHub</a>
+            <a href="https://x.com/" class="social-icon">Twitter</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-preview">
+        <h2>About Me</h2>
+        <p>
+          My hobbies include technology and solving problems – at least the ones
+          that can be solved. I would rather say that I am more focused on the
+          idea than the idea’s implementation that is why I find it easy coming
+          up with different ideas on how to solve a problem. In addition to
+          this, I’m rather fond of discovering new technologies and acquiring
+          new skills.<br /><br />
+          I follow the idea of collective work of teams and try to be as useful
+          as I can in making and implementing creative and practical solutions.
+          I would like to remain a leader and constantly evolve and develop in
+          the relevant market landscape.
+        </p>
+        <a href="biodata.html" class="btn">Learn More</a>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 Suraj V. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+      $(document).ready(function () {
+        // Smooth scroll for navigation links
+        $("nav ul li a").on("click", function (e) {
+          if (this.hash !== "") {
+            e.preventDefault();
+            const hash = this.hash;
+            $("html, body").animate(
+              {
+                scrollTop: $(hash).offset().top,
+              },
+              800
+            );
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
